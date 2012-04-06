@@ -1,5 +1,5 @@
-
-syntax:
+# HTTP user_agent module for Tengine
+#syntax:
 
 user_agent $variable_name {
     nogreedy        name;
@@ -12,7 +12,7 @@ if ($variable == value) {
 }
 
 
-it should define like this in the block:
+## Introduction
 
 nongreedy:
 we specify the keyword in the user_agent string from right to left,and this is more efficient.
