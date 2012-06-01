@@ -266,7 +266,6 @@ ngx_http_user_agent(ngx_conf_t *cf, ngx_command_t *cmd, void *conf)
     nelts = cf->args->nelts;
 
     name = NULL;
-    mode = 0;
 
     if (nelts <= 1) {
         ngx_conf_log_error(NGX_LOG_EMERG, cf, 0,
@@ -311,7 +310,7 @@ ngx_http_user_agent(ngx_conf_t *cf, ngx_command_t *cmd, void *conf)
             return NGX_CONF_OK;
         }
 
-        if (ngx_strcmp(args[0].data, "nongreedy") == 0) {
+        if (ngx_strcmp(args[0].data, "greedy") == 0) {
             mode = NGX_TRIE_REVERSE | NGX_TRIE_CONTINUE;
             trie->insert(trie, args + 1, mode);
 
