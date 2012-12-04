@@ -14,7 +14,7 @@ if ($variable == value) {
 
 ## Introduction
 
-nongreedy:
+greedy:
 We specify the keyword in the user_agent string from right to left, and this is more efficient. As usual, we use the greedy algorithm. It will return immediately after the keyword being found.
 
 E.g 1. "Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; WOW64; Trident/6.0)", this string is MSIE's user_agent string, we will return when we find the keyword "MSIE". But the truth is not alway like this:
